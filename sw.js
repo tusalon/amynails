@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Jessi Nails 
+// sw.js - Service Worker para Emy nails
 
-const CACHE_NAME = 'jessinails-v1';
+const CACHE_NAME = 'amynails-v1';
 const urlsToCache = [
-  '/jessinails/',
-  '/jessinails/index.html',
-  '/jessinails/admin.html',
-  '/jessinails/admin-login.html',
-  '/jessinails/setup-wizard.html',
-  '/jessinails/editar-negocio.html',
-  '/jessinails/manifest.json',
-  '/jessinails/icons/icon-72x72.png',
-  '/jessinails/icons/icon-96x96.png',
-  '/jessinails/icons/icon-128x128.png',
-  '/jessinails/icons/icon-144x144.png',
-  '/jessinails/icons/icon-152x152.png',
-  '/jessinails/icons/icon-192x192.png',
-  '/jessinails/icons/icon-384x384.png',
-  '/jessinails/icons/icon-512x512.png'
+  '/amynails/',
+  '/amynails/index.html',
+  '/amynails/admin.html',
+  '/amynails/admin-login.html',
+  '/amynails/setup-wizard.html',
+  '/amynails/editar-negocio.html',
+  '/amynails/manifest.json',
+  '/amynails/icons/icon-72x72.png',
+  '/amynails/icons/icon-96x96.png',
+  '/amynails/icons/icon-128x128.png',
+  '/amynails/icons/icon-144x144.png',
+  '/amynails/icons/icon-152x152.png',
+  '/amynails/icons/icon-192x192.png',
+  '/amynails/icons/icon-384x384.png',
+  '/amynails/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/jessinails/icons/icon-192x192.png');
+            return caches.match('/amynails/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Jessi Nails ');
+console.log('✅ Service Worker configurado para Emy nails');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
