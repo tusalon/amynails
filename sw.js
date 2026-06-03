@@ -1,6 +1,6 @@
 // sw.js - Service Worker para Emy nails
 
-const CACHE_NAME = 'amynails-v48';
+const CACHE_NAME = 'amynails-v49';
 const urlsToCache = [
   '/amynails/',
   '/amynails/index.html',
